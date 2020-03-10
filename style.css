@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    background-color: #333333;
+    font-family: sans-serif;
+    color: #cacaca;
+}
+
+#hangman {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+}
+
+#menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #cacaca;
+}
+
+#menu.pause {
+    display: flex;
+}
+
+#menu .menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border: solid 1px #000000;
+    border-radius: 3px;
+    background-color: #333333;
+    color: #cacaca;
+}
+
+#menu .menu-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+#menu .menu-status h1 {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+#menu .menu-status h1.new {
+    color: yellow;
+}
+
+#menu .menu-status h1.win {
+    color: springgreen;
+}
+
+#menu .menu-status h1.loss {
+    color: tomato;
+}
+
+#menu button {
+    outline: none;
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: springgreen;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #333333;
+    cursor: pointer;
+    transition: ease 200ms;
+}
+
+#menu button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game .game-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+#game .word {
+    margin-bottom: 1.6rem;
+}
+
+#game .word h1 {
+    letter-spacing: 3px;
+}
+
+#game .tries {
+    margin-bottom: 1.4rem;
+}
+
+#game .tries h2 {
+    font-size: 1rem;
+}
+
+#game .letters {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#game .letters .letter {
+    padding: .3rem .6rem;
+    margin: .3rem .6rem;
+    border: solid 1px white;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#game .letters .letter:hover {
+    background-color: #cacaca;
+    color: #333333;
+}
+
+#game .letters .letter h3 {
+    font-family: monospace;
+}
+
+#game .letters .letter.used {
+    background-color: #cacaca;
+    color: #333333;
+    cursor: not-allowed;
+    pointer-events: none;
+}
